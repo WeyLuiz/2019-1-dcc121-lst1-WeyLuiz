@@ -5,11 +5,20 @@
     <title>Questão 10</title>
 </head>
 <body>
-    <p id="nome">Jon</p>
-    <p id="sobrenome">Snow</p>
-    <h1 id="nomecompleto"></h1>
+        <p><span id="nome"></span></p>
+        <p><span id="sobrenome"></span></p>
+        <h1>Bem vindo <span id="nomecompleto"></span>!</h1>
+       
     <script>
-        
+        var nome = "Jon";
+        var sobrenome = "Snow";
+        var nomecompleto = nome+" "+sobrenome;
+        var eNome = document.getElementById ("nome");
+        eNome.textContent = nome;
+        var eSobrenome = document.getElementById ("sobrenome");
+        eSobrenome.textContent = sobrenome;
+        var eNomecompleto = document.getElementById ("nomecompleto");
+        eNomecompleto.textContent = nomecompleto;
     </script>
 </body>
 </html>
