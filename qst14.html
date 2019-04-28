@@ -18,6 +18,12 @@
         var botao = document.getElementById("calcular");
         x.contentEditable = true;
         y.contentEditable = true;
+        function calcula()
+        {
+            produto.innerText = "O produto de " + x.textContent + " e " +y.textContent +" é " +x.textContent*y.textContent;
+            soma.innerText = "A soma de " + x.textContent + " e " + y.textContent +" é " + (parseInt(x.textContent)+parseInt(y.textContent));
+        }
+        botao.addEventListener("click", calcula);
     </script>
 </body>
 </html>
