@@ -6,7 +6,13 @@
 <body>
     <div id = "interativo">Clique-me!</div>
     <script>
+        var interativo = document.getElementById("interativo");
         
+        function modifica(){
+            interativo.innerText = "Funcionou!";
+        }
+        interativo.addEventListener("click", modifica);
+    </script>
     </script>
 </body>
 </html>
