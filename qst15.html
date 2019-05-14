@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <title>Questão 02</title>
+    <title>Questão 15</title>
 </head>
 <body>
     <main>
         <h1>
             Resultado da Avaliação
         </h1>
-        <p>Olá <span id="nome">Fulano</span>, você está matriculado há <span id="tempo">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são:
-            <span id="n_conf">70</span> em Confeitaria Básica; <span id="n_cob">80</span> em Coberturas e <span id="n_bolos">60</span> em Broas e Bolos.
+        <p>Olá <span id="nome">Fulano</span>, você está matriculado há <span id="anos">2</span> anos no curso de Confeitaria e as notas das suas disciplinas são:
+            <span id="n_confeitaria">70</span> em Confeitaria Básica; <span id="n_coberturas">80</span> em Coberturas e <span id="n_bolos">60</span> em Broas e Bolos.
         </p>
         <p id="resultado"></p>
         <button id="avaliar">Avaliar</button>
@@ -20,9 +20,9 @@
    <script>
        var nome, anos, confeitaria, coberturas, bolos, botaoAvaliar, botaoLimpar, resultado, melhorias, media;
         nome = document.getElementById("nome");
-        anos = document.getElementById("tempo");
-        confeitaria = document.getElementById("n_conf");
-        coberturas = document.getElementById("n_cob");
+        anos = document.getElementById("anos");
+        confeitaria = document.getElementById("n_confeitaria");
+        coberturas = document.getElementById("n_coberturas");
         bolos = document.getElementById("n_bolos");
         botaoAvaliar = document.getElementById("avaliar");
         botaoLimpar = document.getElementById("limpar");
@@ -51,6 +51,18 @@
             else
             {
                 resultado.innerText = "Você está reprovado com média " + media + '!'
+            }
+            if(parseInt(confeitaria.innerText)<60)
+            {
+                melhorias.innerText = nome.innerText +", considere estudar mais Confeitaria! \n";
+            }
+            if(parseInt(coberturas.innerText)<60)
+            {
+                melhorias.innerText =  melhorias.innerText + nome.innerText +", considere estudar mais Coberturas! \n";
+            }
+            if(parseInt(bolos.innerText)<60)
+            {
+                melhorias.innerText = melhorias.innerText + nome.innerText +", considere estudar mais Broas e Bolos!";
             }
         }
    </script>
